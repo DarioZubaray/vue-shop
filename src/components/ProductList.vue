@@ -36,8 +36,10 @@
         },
         methods: {
             ...mapActions('products', ['fetchProducts']),
+            ...mapMutations('cart', ['addProduct']),
             addProductToCart(product) {
-
+                console.log("llamada a la mutation del store cart")
+                this.addProduct(product)
             }
         }
     }
