@@ -1,14 +1,10 @@
-<template>
-  <div id="app" class="mt-5">
-    <shop-layout>
-      <template slot="product-list">
-          <product-list></product-list>
-      </template>
-      <template slot="cart">
-          <cart></cart>
-      </template>
-    </shop-layout>
-  </div>
+<template lang="pug">
+  div(id="app" class="mt-5")
+    shop-layout
+      template(slot="product-list")
+          product-list
+      template(slot="cart")
+          cart
 </template>
 
 <script>
