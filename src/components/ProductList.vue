@@ -5,7 +5,7 @@
 
                 b-card-group(columns)
                     product-item(v-for="product in paginated('products')" :key="product.id" 
-                        :product="product" @addToCart="'addProductToCart'")
+                        :product="product" @addToCart="addProductToCart")
 
             paginate-links(for="products" :classes={'ul': 'pagination', 'li': 'page-item', 'li > a': 'page-link'})
 
