@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import localForage from "localforage"
 import VuexPersistence from 'vuex-persist'
 import products from './modules/products'
 import cart from './modules/cart'
@@ -7,7 +8,7 @@ import cart from './modules/cart'
 Vue.use(Vuex)
 
 const vuexLocal = new VuexPersistence({
-  storage: window.localStorage,
+  storage: localForage,
   modules: ['cart']
 })
 
